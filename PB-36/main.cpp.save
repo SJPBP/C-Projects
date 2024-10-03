@@ -1,0 +1,143 @@
+/*
+Name: Prabhdeep Singh
+Date: 09/19/2024
+
+Program:
+Prime Number Checker: Create a program that determines whether a given number is prime or not.
+A prime number is a positive integer greater than 1 that has no positive divisors other than 1 and itself.
+
+# Breakdown:
+- How to check if number is prime
+
+> Number less than or equal 1 cannot be prime
+> Check if number is divided evenly from 2 to number/2
+
+> If number is 10
+> As number is bigger that 1 it can be a prime number
+> Loop through 2 to 10/2=5
+    > If number can be divided by iteration
+        and return 0 remainder
+        10 / 2..5 == 0
+    > Then number is not prime number
+        10 is not a prime number
+
+(https://www.programiz.com/cpp-programming/examples/prime-number)
+
+
+- How to use if statement
+if( expression ) {
+ // code
+}
+else {
+    // code
+}
+
+(https://drive.google.com/file/d/1Q_I6H8qBTTIFMHEPbbpKVrg_E5N6cFtg/view)
+(https://www.w3schools.com/cpp/cpp_conditions_elseif.asp)
+
+
+- For loop
+for ( int i = 0; i < arraySize; i++ ) {
+    // code
+}
+
+(https://www.w3schools.com/cpp/cpp_for_loop.asp)
+
+
+Input:
+number (int)
+
+# Variable(s)
+int number
+bool isPrimeNumber = true
+
+# Method
+None
+
+Input:
+
+
+Process:
+
+
+Output:
+
+
+Return:
+
+
+Process:
+> Ask user for positive integer
+    - Please enter a positive number:
+> Check if
+        *number* is less than or equal to 1
+        - number <= 1
+    then
+        isPrimeNumber = false
+
+> Else
+    - Loop through from 2 to *number* / 2
+        - Check
+            if *number* evenly divided by iteration
+                - *number* / iteration == 0
+            then
+                isPrimeNumber = false
+> Check if
+        isPrimeNumber is true
+    then
+        output *number* is a prime number
+        - *number* is a prime number!!!
+    else
+        output *number* can't be prime number
+        - *number* can't be a prime number!!!
+
+# Dependency:
+None
+
+Output:
+*number* is prime or not
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int number;
+    bool isPrimeNumber = true;
+
+    cout << "Please enter a positive number: ";
+    cin >> number;
+    cout << "\n";
+
+    // Check if number less than or equal 1
+    // then number not a prime
+    if( number <= 1 ) {
+
+        isPrimeNumber = false;
+    }
+    // Else check if number is evenly divided by other number
+    // then number not a prime
+    else {
+
+        for( int i = 2; i <= 10; i++ ) {
+
+            if( number % i  != 0 ) {
+                cout << "\n "
+                //isPrimeNumber = false;
+            }
+        }
+    }
+
+    // isPrimeNumber is true mean number is a prime, else not prime
+    if( isPrimeNumber == true ) {
+
+        cout << number << " is a prime number!!!" << "\n";
+    }
+    else {
+
+        cout << number << " is not a prime number!!!" << "\n";
+    }
+    return 0;
+}

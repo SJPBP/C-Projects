@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1725753180 source:/home/brush/dotfiles/C++/Projects/PB-34/main.cpp
+	<cmath>
+	<iostream>
+	<cmath>
+
